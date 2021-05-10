@@ -7,7 +7,7 @@
 ---
 ## ⚙️ Project demonstration (demontração do projeto)
 The algorithm generates 03 Reports:
- - Report 01, which contains:
+- Report 01, which contains:
   - post_link; and
   - post_link_type (img or vid).
 <p align="center"> <img alt="example_of_origin_data.JPG" title="example_of_origin_data.JPG" src="./assets/example_of_origin_data.JPG" width="400px">
