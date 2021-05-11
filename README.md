@@ -71,6 +71,7 @@ To run the code, it is recommended to install the following Python Packaged:
 - urllib3==1.26.4
 
 
+
 #### Running the codes (rodando os códigos)
 
 ```bash
