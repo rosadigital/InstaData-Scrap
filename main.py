@@ -1,11 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options  # To set up selenium without show browser
-from fn_login import Login  # Login on instagram
-from fn_DB01 import DB01  # To create report 01
-from fn_DB02 import DB02  # To create report 02
-from fn_DB03 import DB03  # To create report 03
-import pickle  # To work with cookies
-import time
+from codes.Login import Login  # Login on instagram
+from codes.DB01 import DB01  # To create report 01
+from codes.DB02 import DB02  # To create report 02
+from codes.DB03 import DB03  # To create report 03
 
 '''Settings'''
 headless_option = input("Hello, how are you doing?"
