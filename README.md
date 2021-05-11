@@ -8,7 +8,9 @@
 ## ⚙️ Project demonstration (demontração do projeto)
 The algorithm generates 03 Reports:
 - Report 01, which contains:
-  - post_link; and
+  - post_link;
+  - post_date;
+  - amount_of_likes;
   - post_link_type (img or vid).
 <p align="center"> <img alt="example_report_01.JPG" title="example_report_01.JPG" src="./assets/example_report_01.jpg" width="800px">
 
