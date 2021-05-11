@@ -12,11 +12,10 @@ import threading
 
 
 class DB01:
-    def __init__(self, username, driver, cookies, root_folder):
+    def __init__(self, username, driver, cookies):
         self.username = username
         self.driver = driver
         self.cookies = cookies
-        self.root_folder = root_folder
 
     def creating_folder(self):
         print('Creating folder')
@@ -30,7 +29,6 @@ class DB01:
     def get_posts_links(self):  # getting posts links
         username = self.username
         driver = self.driver
-        root_folder = self.root_folder
 
         # Accessing instagram page to be searched
         print("Accessing instagram page to be searched")
@@ -94,8 +92,6 @@ class DB01:
             'indice_interno': indice_interno_completo,
             'post_link': lista}
 
-        root_folder = str(root_folder)
-        path = root_folder + '/' + str(username)
         relatorio_BD01 = pd.DataFrame(data=relatorio_BD01)
         relatorio_BD01.to_csv(str(username) + '/report_01_' + str(username) + '.csv', index=False)
 
@@ -108,7 +104,6 @@ class DB01:
     def get_posts_vid_or_img_links(self, post_link_list):
         username = self.username
         driver = self.driver
-        root_folder = self.root_folder
         cookies = self.cookies
 
         followers_link_completo = []
@@ -118,8 +113,6 @@ class DB01:
         amount_of_likes_completo = []
         followers_names_completo = []
         post_link_type_completo = []
-        pd.set_option('display.max_rows', None)
-        pd.set_option('display.max_columns', None)
 
         driver.get('https://www.instagram.com/accounts/onetap/?next=%2F')
         for cookie in cookies:
@@ -169,8 +162,6 @@ class DB01:
             'post_link_type': post_link_type_completo
         }
 
-        root_folder = str(root_folder)
-        path = root_folder + '/' + username
         relatorio_db01_vid_or_img = pd.DataFrame(data=relatorio_db01_vid_or_img)
 
         relatorio_db01_vid_or_img_final = pd.read_csv(
@@ -201,6 +192,7 @@ class DB01:
 
     def creating_chunks(self, post_link_list, chunk_size):
         # creating chunks of data
+        chunk_size = int(chunk_size)
         x = range(0, len(post_link_list), chunk_size)
         groups_of_data = [post_link_list[i:i + chunk_size] for i in x]
         # print('slice: ', groups_of_data)
@@ -235,10 +227,9 @@ class DB01:
     def run(self):
         username = self.username
         driver = self.driver
-        root_folder = self.root_folder
         cookies = self.cookies
 
-        start = DB01(username, driver, cookies, root_folder)
+        start = DB01(username, driver, cookies)
         start.creating_folder()  # creates folder to reports
         start.get_posts_links()  # generate report_DB01 with links
         post_link_list = start.data_to_multiprocess()  # access data to multiprocess
@@ -247,6 +238,7 @@ class DB01:
         groups = start.creating_chunks(post_link_list, chunk_size)[0]  # creating chunks of data
         groups_of_data = start.creating_chunks(post_link_list, chunk_size)[1]  # creating chunks of data
 
+        print('Starting to create report 01')
         print('Starting threading')
         print('groups: ', groups)
         time_starting = datetime.now()
