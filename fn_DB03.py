@@ -227,7 +227,7 @@ class DB03:
                             bio = str("n/a")
                             followers_bio_completed.append(bio)
                         else:
-                            bio = data.find(class_='-vDIg').span.text
+                            bio = data.find(class_='-vDIg').text
                             followers_bio_completed.append(bio)
                     except:
                         bio = str("n/a")
