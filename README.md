@@ -10,7 +10,7 @@ The algorithm generates 03 Reports:
 - Report 01, which contains:
   - post_link; and
   - post_link_type (img or vid).
-<p align="center"> <img alt="example_report_01.JPG" title="example_report_01.JPG" src="./assets/example_report_01.jpg" width="400px">
+<p align="center"> <img alt="example_report_01.JPG" title="example_report_01.JPG" src="./assets/example_report_01.jpg" width="800px">
 
 - Report 02, derived from Report 01, which contains:
   - post_link_type (img or vid);
@@ -19,7 +19,7 @@ The algorithm generates 03 Reports:
   - amount_of_likes;
   - likers_links; and
   - likers_names.
-<p align="center"> <img alt="example_report_02.JPG" title="example_report_02.JPG" src="./assets/example_report_02.jpg" width="400px">
+<p align="center"> <img alt="example_report_02.JPG" title="example_report_02.JPG" src="./assets/example_report_02.jpg" width="1000px">
    
 - Report 03, derived from Report 01, which contains:
   - followers_links,
@@ -29,12 +29,12 @@ The algorithm generates 03 Reports:
   - followers_amount_of_following;
   - followers_private_or_public_profile_status; and
   - followers_bio_description.
-<p align="center"> <img alt="example_report_03.JPG" title="example_report_03.JPG" src="./assets/example_report_03.jpg" width="400px">
+<p align="center"> <img alt="example_report_03.JPG" title="example_report_03.JPG" src="./assets/example_report_03.jpg" width="2000px">
 
 The example of data scraped can be seen here:
-- [report01.csv](./report_01_renovesergipe.csv)
-- [report02.csv](./report_02_renovesergipe.csv)
-- [report03.csv](./report_03_renovesergipe.csv)
+- [report01_sample.csv](./report_samples/report_01_coisandoporai.csv)
+- [report02_sample.csv](./report_samples/report_02_coisandoporai.csv)
+- [report03_sample.csv](./report_samples/report_03_coisandoporai.csv)
 
 ---
 	
