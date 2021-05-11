@@ -52,7 +52,12 @@ The example of data scraped can be seen here:
 ## 🚀 How to execute this project (como executar este projeto)
 
  - To run the code it is recommended to use an IDE, such as Pycharm;
-  - Just clone this project, open on your IDE, and run.
+  - Just clone this project, open on your IDE, and run the file main.py
+  - From main.py, this file will run:
+    - DB01: for a draft of report 01;
+    - DB02: for the report 02 and a final report 01; and
+    - DB03: for the report 03.
+  - Note: by commenting DB01 or DB02 or DB03, on main.py, it is possible to do not generate, respectively, the reports 01, 02, and 03. 
 
 ### 🎲 Requirements (requisitos)
 
